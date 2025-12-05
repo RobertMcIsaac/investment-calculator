@@ -1,57 +1,53 @@
 <form (ngSubmit)="onSubmit()">
-  <table>
-    <tbody>
-      <tr class="input-group">
-        <td>
-          <label for="initialInvestment">INITIAL INVESTMENT</label>
-          <input
-            type="text"
-            name="initialInvestment"
-            id="initialInvestment"
-            value="0"
-            [(ngModel)]="initialInvestment"
-          />
-        </td>
+  <div class="input-group">
+    <p>
+      <label for="initialInvestment">INITIAL INVESTMENT</label>
+      <input
+        type="text"
+        name="initialInvestment"
+        id="initialInvestment"
+        value="0"
+        [(ngModel)]="initialInvestment"
+      />
+    </p>
 
-        <td>
-          <label for="annualInvestment">ANNUAL INVESTMENT</label>
-          <input
-            type="text"
-            name="annualInvestment"
-            id="annualInvestment"
-            value="0"
-            [(ngModel)]="annualInvestment"
-          />
-        </td>
-      </tr>
+    <p>
+      <label for="annualInvestment">ANNUAL INVESTMENT</label>
+      <input
+        type="text"
+        name="annualInvestment"
+        id="annualInvestment"
+        value="0"
+        [(ngModel)]="annualInvestment"
+      />
+    </p>
+  </div>
 
-      <tr class="input-group">
-        <td>
-          <label for="expectedReturn">EXPECTED RETURN</label>
-          <input
-            type="text"
-            name="expectedReturn"
-            id="expectedReturn"
-            value="0"
-            [(ngModel)]="expectedReturn"
-          />
-        </td>
+  <div class="input-group">
+    <p>
+      <label for="expectedReturn">EXPECTED RETURN</label>
+      <input
+        type="text"
+        name="expectedReturn"
+        id="expectedReturn"
+        value="0"
+        [(ngModel)]="expectedReturn"
+      />
+    </p>
 
-        <td>
-          <label for="duration">DURATION</label>
-          <input
-            type="text"
-            name="duration"
-            id="duration"
-            value="0"
-            [(ngModel)]="duration"
-          />
-        </td>
-      </tr>
-    </tbody>
-  </table>
+    <p>
+      <label for="duration">DURATION</label>
+      <input
+        type="text"
+        name="duration"
+        id="duration"
+        value="0"
+        [(ngModel)]="duration"
+      />
+    </p>
+  </div>
 
-  <button type="submit">CALCULATE</button>
+  <p>
+    <button type="submit">CALCULATE</button>
+  </p>
 </form>
-
-<!-- initial investment  -->
