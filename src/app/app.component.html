@@ -1,6 +1,14 @@
 <main>
-  <app-header />
   <body>
-    <app-user-input />
+    <app-header />
+    <app-user-input (calculate)="onCalculate($event)" />
+
+    <app-investment-results
+      [investmentResults]="investmentResults"
+      *ngIf="investmentResults; else fallback"
+    />
+    <ng-template #fallback>
+      <p>Please enter some values and press "Calculate".</p>
+    </ng-template>
   </body>
 </main>
