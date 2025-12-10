@@ -1,0 +1,9 @@
+{
+    "github.copilot.enable": {
+        "markdown": true,
+        "scminput": true,
+        "plaintext": true
+    },
+    "github.copilot.chat.anthropic.thinking.enabled": true,
+    "github.copilot.chat.anthropic.tools.websearch.enabled": true
+}

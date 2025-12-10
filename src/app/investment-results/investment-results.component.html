@@ -2,20 +2,27 @@
   Please enter some values and press "Calculate".
 </p>
 
-<table #fallback>
-  <thead>
-    <tr>
-      <th>Year</th>
-      <th>Investment Value</th>
-      <th>Interest (Year)</th>
-      <th>Investment Total</th>
-      <th></th>
-    </tr>
-  </thead>
+<ng-template #fallback>
+  <table>
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th>Investment Value</th>
+        <th>Interest (Year)</th>
+        <th>Total Interest</th>
+        <th>Invested Capital</th>
+        <th></th>
+      </tr>
+    </thead>
 
-  <tbody>
-    <tr>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+    <tbody>
+      <tr *ngFor="let result of results">
+        <td>{{ result.year }}</td>
+        <td>{{ result.valueEndOfYear | currency : "GBP" }}</td>
+        <td>{{ result.interest | currency : "GBP" }}</td>
+        <td>{{ result.totalInterest | currency : "GBP" }}</td>
+        <td>{{ result.totalAmountInvested | currency : "GBP" }}</td>
+      </tr>
+    </tbody>
+  </table>
+</ng-template>
